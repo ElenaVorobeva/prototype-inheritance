@@ -1,47 +1,68 @@
-// export var SIZE_SMALL = "SIZE_SMALL";
-// export var SIZE_LARGE = "SIZE_LARGE";
-// export var STUFFING_CHEESE = "STUFFING_CHEESE";
-// export var STUFFING_SALAD = "STUFFING_SALAD";
-// export var STUFFING_POTATO = "STUFFING_POTATO";
-
-export var SIZE_SMALL = {
+var SIZE_SMALL = {
+  typeName: "Small",
   price: 50,
   calories: 20,
 };
 
-export var SIZE_LARGE = {
+var SIZE_LARGE = {
+  typeName: "Large",
   price: 100,
   calories: 40,
 };
-export var STUFFING_CHEESE = {
+var STUFFING_CHEESE = {
+  typeName: "Cheese",
+
   price: 10,
   calories: 20,
 };
-export var STUFFING_SALAD = {
+var STUFFING_SALAD = {
+  typeName: "Salad",
   price: 20,
   calories: 5,
 };
-export var STUFFING_POTATO = {
+var STUFFING_POTATO = {
+  typeName: "Potato",
   price: 15,
   calories: 10,
 };
 
-export var CAESAR = {
+var CAESAR = {
+  typeName: "Caesar",
   price: 100,
   calories: 20,
 };
 
-export var OLIVIER = {
+var OLIVIER = {
+  typeName: "Olivier",
   price: 50,
   calories: 80,
 };
 
-export var COLA = {
+var COLA = {
+  typeName: "Cola",
   price: 50,
   calories: 40,
 };
 
-export var COFFEE = {
+var COFFEE = {
+  typeName: "Coffee",
   price: 80,
   calories: 20,
+};
+
+var SALAD_SIZE = 100;
+var INITIAL_RESULT = 0;
+
+module.exports = {
+  SIZE_SMALL,
+  SIZE_LARGE,
+  STUFFING_CHEESE,
+  STUFFING_SALAD,
+  STUFFING_POTATO,
+  CAESAR,
+  OLIVIER,
+  COLA,
+  COFFEE,
+  SALAD_SIZE,
+  INITIAL_RESULT,
 };
