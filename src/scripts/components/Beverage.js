@@ -1,17 +1,10 @@
-var Food = require("./Food");
+var { Food, getType } = require("./Food");
 
 function Beverage(type) {
   Food.call(this, type);
+  this.getType = getType(this.type.typeName);
+  this.calculatePrice = getType(this.type.price);
+  this.calculateCalories = getType(this.type.calories);
 }
-
-Beverage.prototype = Object.create(Food.prototype);
-
-Beverage.prototype.calculatePrice = function () {
-  return this.type.price;
-};
-
-Beverage.prototype.calculateCalories = function () {
-  return this.type.calories;
-};
 
 module.exports = Beverage;
