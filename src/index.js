@@ -42,7 +42,7 @@ var salad2 = new Salad(CAESAR, 50);
 var beverage1 = new Beverage(COLA);
 var beverage2 = new Beverage(COFFEE);
 
-/* ORDER IMMITATION */
+/* ORDER IMITATION */
 
 var order1 = {
   price: calculateOrderPrice(
@@ -76,8 +76,22 @@ var order3 = {
   ),
 };
 
+/* PAYMENT IMITATION */
+function freezeOrders(order) {
+  Object.freeze(order);
+}
+
 /* RESULTS */
 
 console.log(order1); // {price: "Итого тугриков: 125", calories: "Итого калорий: 70"}
 console.log(order2); // {price: "Итого тугриков: 670", calories: "Итого калорий: 185"}
 console.log(order3); // {price: "Итого тугриков: 130", calories: "Итого калорий: 30"}
+
+freezeOrders(order1);
+
+console.log(
+  (order1.price = calculateOrderPrice(
+    hamburger1.calculatePrice,
+    hamburger3.calculatePrice
+  ))
+); // TypeError: Attempted to assign to readonly property.
